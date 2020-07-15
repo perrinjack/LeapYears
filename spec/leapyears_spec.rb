@@ -9,11 +9,15 @@ describe 'leap_year?' do
     end
   end
 
-  it 'returns false for years divisible by 100 but not by 400' do
-    expect(leap_year?(300)).to eq false
+  [500, 700, 4100].each do |element|
+    it 'returns false for years divisible by 100 but not by 400' do
+      expect(leap_year?(element)).to eq false
+    end
   end
 
-  it 'returns false for years not divisible by 4' do
-    expect(leap_year?(2049)). to eq false
+  [801, 701, 4001].each do |element|
+    it 'returns false for years not divisible by 4' do
+      expect(leap_year?(element)). to eq false
+    end
   end
 end
