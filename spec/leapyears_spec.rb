@@ -26,6 +26,4 @@ describe 'leap_year?' do
       expect(leap_year?(element)). to eq true
     end
   end
-
-
 end
