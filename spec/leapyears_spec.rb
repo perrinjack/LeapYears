@@ -20,4 +20,12 @@ describe 'leap_year?' do
       expect(leap_year?(element)). to eq false
     end
   end
+
+  [240, 1004, 4040].each do |element|
+    it 'returns true for years divisible by 4 and not by 100' do
+      expect(leap_year?(element)). to eq true
+    end
+  end
+
+
 end
